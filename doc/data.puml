@@ -1,0 +1,20 @@
+@startuml Patient Journal System
+
+class Journal {
+  journalId: String
+  patientId: String
+  creationDate: Date
+}
+
+class JournalEntry {
+  entryId: String
+  journalId: String
+  timestamp: DateTime
+  authorId: String
+  content: String
+}
+
+' Relationships
+Journal "1" -r- "*" JournalEntry
+
+@enduml
